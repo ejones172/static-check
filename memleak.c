@@ -72,6 +72,7 @@ void memleak_global_malloc_leak(void)
 	global_mem = malloc(42);
 }
 
+
 void memleak_global_malloc_leak2(void)
 {
 	memleak_global_malloc();
@@ -85,4 +86,5 @@ void memleak_global_double_free(void)
 	memleak_global_free();
 	memleak_global_free();
 }
+
 

@@ -1,5 +1,5 @@
-CC ?= gcc
-ALL_CFLAGS = -Wall $(CFLAGS)
+CC = gcc
+ALL_CFLAGS = $(CFLAGS)
 ALL_LDFLAGS = $(LDFLAGS)
 BUILDDIR = build
 
@@ -10,9 +10,10 @@ clean:
 
 SRCS+=main.c
 SRCS+=memleak.c
-#SRCS+=floattests.c
-#SRCS+=deadcode.c
-#SRCS+=pointers.c
+SRCS+=uninitialized.c
+SRCS+=badbranch.c
+SRCS+=nullptr.c
+SRCS+=arrayoob.c
 
 OBJS:=$(SRCS:%.c=$(BUILDDIR)/%.o)
 
