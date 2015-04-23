@@ -46,8 +46,8 @@ int uninitialized_out_of_scope(int x)
 int* uninitialized_out_of_scope2(void)
 {
 	int x;
-	int p = &x;
-	return &x;
+	int* p = &x;
+	return p;
 }
 
 int uninitialized_out_of_scope3(int x)
